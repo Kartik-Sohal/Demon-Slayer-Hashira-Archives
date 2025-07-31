@@ -1,0 +1,210 @@
+:root {
+    --background-color: #121212;
+    --primary-text-color: #E0E0E0;
+    --card-background: #1E1E1E;
+    --accent-color: #00A3FF;
+    --accent-hover-color: #007BFF;
+    --border-color: #333333;
+}
+
+/* Basic Reset and Font Import */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header and Navigation */
+header {
+    background: var(--card-background);
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+header h1 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--accent-color);
+}
+
+/* General Section Styles */
+section {
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    background: var(--card-background);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    font-size: 2rem;
+}
+
+/* Character Card Gallery */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.character-card {
+    background: #252525;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the image corners are rounded */
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 163, 255, 0.2);
+}
+
+.character-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.character-card h3 {
+    padding: 15px 10px 5px;
+    color: var(--accent-color);
+}
+
+.character-card p {
+    padding: 0 10px 15px;
+    font-size: 0.9rem;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+table thead {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #252525;
+}
+
+/* Iframe (Video) Section */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #252525;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--primary-text-color);
+    font-size: 1rem;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(0, 163, 255, 0.5);
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: var(--accent-hover-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    color: #888;
+}
